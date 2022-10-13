@@ -1,0 +1,8 @@
+[Desktop Entry]
+Version=1.0
+Type=Application
+Terminal=false
+Exec=/home/hydrosat/install/webstorm/bin/webstorm.sh
+Name=Webstorm
+Comment=Webstorm
+Icon=/home/hydrosat/install/webstorm/bin/webstorm.png
