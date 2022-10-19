@@ -39,6 +39,13 @@ nnoremap <C-H> gT
 
 set colorcolumn=120
 highlight ColorColumn ctermbg=0 guibg=lightgrey
+
+" VIM PLUG INSTALL
+let data_dir = has('nvim') ? stdpath('data') . '/site' : '~/.vim'
+if empty(glob(data_dir . '/autoload/plug.vim'))
+  silent execute '!curl -fLo '.data_dir.'/autoload/plug.vim --create-dirs  https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim'
+  autocmd VimEnter * PlugInstall --sync | source $MYVIMRC
+endif
 call plug#begin()
 Plug 'vim-utils/vim-man'
 Plug 'git@github.com:ctrlpvim/ctrlp.vim.git'
