@@ -17,3 +17,7 @@ sudo chmod a+r /etc/apt/keyrings/docker.gpg
 sudo apt-get update
 
 sudo apt-get install -y docker-ce docker-ce-cli containerd.io docker-compose-plugin
+
+# ADD user to docker-group, to avoid running docker as sudo
+ sudo groupadd docker
+ sudo usermod -aG docker $USER
