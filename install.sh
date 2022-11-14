@@ -7,15 +7,16 @@ sudo  apt-get install -y git
 sudo apt-get install -y curl
 sudo apt-get install -y zsh
 sudo apt-get install -y tldr
-sudo apt-get install fzf
-tldr -u
+sudo apt-get install -y fzf
+sudo apt-get install -y xclip
+sudo apt-get install -y gitk
 
 #Install programming software
 curl https://raw.githubusercontent.com/creationix/nvm/master/install.sh | bash 
 nvm install 16
 sudo snap install pycharm-community --classic
 sudo snap install postman
-
+sudo snap install slack
 
 ## Install postgresql
 echo "Installing Postgresql"
@@ -27,6 +28,10 @@ sudo apt-get -y install postgresql
 ## Installing DBeaver
 sudo snap install dbeaver-ce
 
+## Installing aws-cli
+curl "https://awscli.amazonaws.com/awscli-exe-linux-x86_64.zip" -o "awscliv2.zip"
+unzip awscliv2.zip
+sudo ./aws/install
 ## Install oh-my-zsh
 sh -c "$(curl -fsSL https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
 
@@ -46,4 +51,11 @@ wget https://github.com/romkatv/powerlevel10k-media/raw/master/MesloLGS%20NF%20B
 
 fc-cache -f -v
 
-#RUn zsh to config powerlevel 10. Logout/Login
+git clone --depth=1 https://github.com/romkatv/powerlevel10k.git ~/powerlevel10k
+echo 'source ~/powerlevel10k/powerlevel10k.zsh-theme' >>~/.zshrc
+# Config vimplugin 
+
+ln -s ~/.vimrc ~/.ideavimrc
+#RUn zsh to config powerlevel 10.
+exex zsh
+#Logout/Login
