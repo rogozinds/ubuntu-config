@@ -1,4 +1,4 @@
-#~/bin/bash
+#!/bin/bash
 #Install OS dependencies
 sudo apt-get update
 sudo apt-get install -y python3-pip python3-tk python3-dev
@@ -10,7 +10,11 @@ sudo apt-get install -y tldr
 sudo apt-get install -y fzf
 sudo apt-get install -y xclip
 sudo apt-get install -y gitk
+sudo apt-get install -y meld
 
+# Configuration
+## setup meld as default mergetool
+git config --global merge.tool meld
 #Install programming software
 curl https://raw.githubusercontent.com/creationix/nvm/master/install.sh | bash 
 nvm install 16

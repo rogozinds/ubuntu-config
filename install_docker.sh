@@ -1,4 +1,4 @@
-#~/bin/zsh
+#!/bin/zsh
 
 sudo apt-get install -y \
     ca-certificates \
