@@ -11,6 +11,7 @@ sudo apt-get install -y fzf
 sudo apt-get install -y xclip
 sudo apt-get install -y gitk
 sudo apt-get install -y meld
+sudo apt-get install -y nodejs
 
 # Configuration
 ## setup meld as default mergetool
