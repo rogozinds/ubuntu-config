@@ -1,5 +1,10 @@
+" Yaml file handling
+autocmd FileType yaml setlocal ts=2 sts=2 sw=2 expandtab
+filetype plugin indent on
+autocmd FileType yaml setl indentkeys-=<:>
+"
 syntax on
-
+let mapleader = " "
 set noerrorbells
 set belloff=all
 set tabstop=4 softtabstop=4
@@ -37,6 +42,10 @@ nnoremap <C-K> <C-W><C-K>
 nnoremap <C-L> gt
 nnoremap <C-H> gT
 
+" Save on Ctrl + S
+:nmap <c-s> :w<CR>
+:imap <c-s> <Esc>:w<CR>a
+
 set colorcolumn=120
 highlight ColorColumn ctermbg=0 guibg=lightgrey
 
@@ -55,5 +64,24 @@ Plug 'tpope/vim-surround'
 Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
 Plug 'junegunn/fzf.vim'
 Plug 'kshenoy/vim-signature'
+Plug 'easymotion/vim-easymotion'
+Plug 'vim-airline/vim-airline'
 call plug#end()
+" Easy Motion Configure
+" let g:EasyMotion_do_mapping = 0 " Disable default mappings
+
+" Jump to anywhere you want with minimal keystrokes, with just one key binding.
+" `s{char}{label}`
+" nmap s <Plug>(easymotion-overwin-f)
+" or
+" `s{char}{char}{label}`
+" Need one more keystroke, but on average, it may be more comfortable.
+" nmap s <Plug>(easymotion-overwin-f2)
+
+" Turn on case-insensitive feature
+" let g:EasyMotion_smartcase = 1
+
+" JK motions: Line motions
+" map <Leader>j <Plug>(easymotion-j)
+" map <Leader>k <Plug>(easymotion-k)
 
