@@ -37,6 +37,10 @@ sudo snap install dbeaver-ce
 curl "https://awscli.amazonaws.com/awscli-exe-linux-x86_64.zip" -o "awscliv2.zip"
 unzip awscliv2.zip
 sudo ./aws/install
+
+## Installing aws-cdk
+npm install -g aws-cdk
+
 ## Install oh-my-zsh
 sh -c "$(curl -fsSL https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
 
