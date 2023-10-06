@@ -22,3 +22,10 @@ echo "export PATH=\"\$M2_HOME/bin:\$PATH\"" >> $export_path
 
 echo "JAVA VERSION $JAVA_HOME"
 echo "MAVEN INSTALLED" && mvn -version
+
+## Install Gradle
+wget -c https://services.gradle.org/distributions/gradle-8.3-bin.zip -P /tmp
+sudo unzip -d /opt/gradle /tmp/gradle-8.3-bin.zip
+echo "export GRADLE_HOME=\"/opt/gradle/gradle-8.3\"" >> $export_path 
+echo "export PATH=\"\$GRADLE_HOME/bin:\$PATH\"" >> $export_path
+echo "GRADLE INSTALLED" && gradle -version
