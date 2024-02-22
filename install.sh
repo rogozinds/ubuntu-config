@@ -12,6 +12,11 @@ sudo apt-get install -y xclip
 sudo apt-get install -y gitk
 sudo apt-get install -y meld
 sudo apt-get install -y nodejs
+##  Install cmake and make
+sudo apt-get install -y make
+sudo apt-get install -y cmake
+##  Install tmux
+sudo apt-get install -y tmux
 
 # Configuration
 ## setup meld as default mergetool
@@ -44,8 +49,11 @@ npm install -g aws-cdk
 ## Install oh-my-zsh
 sh -c "$(curl -fsSL https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
 
+## Install jq
+sudo apt-get install jq
 ## Set zsh default
 chsh -s $(which zsh)
+
 #Copy config
 cp ./vim/.vimrc ~/.vimrc
 cp ./zsh/.zshrc ~/.zshrc
